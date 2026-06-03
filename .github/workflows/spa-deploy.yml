@@ -4,6 +4,10 @@
 
 name: Deploy SPA to App Service
 
+permissions:
+ id-token: write
+ contents: read
+
 on:
   push:
     branches: ["main"]
