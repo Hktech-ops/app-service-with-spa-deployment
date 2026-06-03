@@ -19,19 +19,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: "18"
-
-      - name: Install Dependencies
-        working-directory: SPA
-        run: npm install
-
-      - name: Build SPA
-        working-directory: SPA
-        run: npm run build
-
       - name: Azure Login (using OIDC)
         uses: azure/login@v2
         with:
